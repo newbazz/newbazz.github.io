@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+      <title>Quick Sort Exercise</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="static/lib/JSAV/css/JSAV.css" type="text/css" />
+      <link rel="stylesheet" href="static/lib/ODSA/css/odsaAV.css" type="text/css" />
+      <link rel="stylesheet" href="static/lib/ODSA/css/odsaStyle.css" type="text/css" />
+      <link rel="stylesheet" href="static/lib/quicksortAV.css" type="text/css" />
+      <link rel="stylesheet" href="static/lib/quicksort-exercise.css" type="text/css" />
+      <link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+      <link rel="stylesheet" type="text/css" href="css/quicksort-styles.css">
+  </head>
+  <body onload="handlers();">
+    <div class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul>
+          <li>Select the pivot element and move it to the
+          appropriate location.</li>
+          <li>Select the left and right endpoints of the range
+          you wish to partition and click "Partition".</li>
+          <li>Once the partition operation has been done for
+          you, click the location where the pivot value should
+          be moved to.</li>
+          <li>When a selected element has been moved to its
+          final sorted location, click "Mark Selected as
+          Sorted".</li>
+          <li>Repeat these steps until the array is sorted.</li> 
+          <li>If you have trouble understanding what you are
+          supposed to do, try viewing a "Model Answer" to see
+          how it is supposed to be done.</li>
+          <li><b>Note :</b> When partitioning, always select the
+          left and right endpoints, even if they are the same
+          element.  When processing a sublist of length 1,
+          simply mark the element as sorted.  When determining
+          the pivot's final location, treat any elements that
+          match the pivot as if they were larger than the
+          pivot.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="container">
+       <p id="question-holder">
+         <b>Question :</b> Here is an unsorted array. You must do a
+         series of steps provided in the instruction box, until the
+         array is completely sorted.
+       </p>
+       
+       <table class="proHeaderTable" style="display: none;">
+         <tr>
+           <td class="headerLeft">
+             <input type="button" id="help" name="help" />
+           </td>
+           <td class="headerCenter">
+             <p class="jsavexercisecontrols"></p>
+           </td>
+           <td class="headerRight">
+             <input type="button" id="about" name="about" />
+             <a id="settings" class="jsavsettings" href="#"></a>
+           </td>
+         </tr>
+       </table>
+       
+       <form class="avcontainer">
+         <p style="display: none;">
+           <input type="button" id="partition" name="partition" />
+           <input type="button" id="markSorted" name="markSorted" />
+           <span class="jsavscore"></span>
+         </p>    
+         <div id="array" class="jsavcanvas"></div>
+       </form>
+       
+       <div id="legend-comment-wrapper">
+          <ul class="legend">
+            <li><span class="left"></span> Left Pointer </li>
+            <li><span class="right"></span> Right Pointer </li>
+            <li><span class="merge"></span> Merge of Pointers</li>
+            <li><span class="selected-pivot"></span> Selected Pivot Element</li>
+            <li><span class="swapping"></span> Swapping</li>
+          </ul>
+          
+          <div class="comment-box">
+            <b>Observations</b>
+            <div class="avcontainer" style="padding-top: 13%;">
+              <p class="jsavoutput jsavline"></p>
+            </div>
+          </div>
+          
+       </div>
+       <div class="buttons-wrapper">
+         <input class="button-input" type="button" value="Partition" id="partition-btn">
+         <input class="button-input" type="button" value="Mark Selected as Sorted" id="mark-btn">
+         <input class="button-input" type="button" value="Reset" id="resetArt">
+         <input class="button-input" type="button" value="Model Answer" id="model-ans-btn">
+       </div>
+       
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="static/lib/JSAV/lib/jquery.transit.js"></script>
+    <script src="static/lib/JSAV/js/JSAV-min.js"></script>
+    <script src="static/lib/ODSA/js/odsaUtils.js"></script>
+    <script src="static/lib/ODSA/js/odsaAV.js"></script>
+    <script src="static/lib/quicksortCODE.js"></script>
+    <script src="js/quicksort-exercise.js"></script>
+    <script src="../../assets/js/instruction-box.js"></script>
+    <script>
+      function handlers(){
+        $("#partition-btn").click(function() {
+          $("#partition").click();
+        });
+    
+        $("#mark-btn").click(function() {
+          $("#markSorted").click();
+        });
+           
+        $("#").click(function() {
+        
+        });
+    
+        $("#resetArt").click(function() {
+          location.reload();
+        });
+      }
+    </script>
+  <script src="../../assets/js/iframeResize.js"></script></body>
+</html>

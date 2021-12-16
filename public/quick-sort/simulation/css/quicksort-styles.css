@@ -1,0 +1,82 @@
+#container {
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow-y: visible;
+  overflow-x: hidden;
+  padding-top: 2%;
+  border: 0;
+  background-color: white !important;
+}
+
+#input-holder {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+#arraysize {
+  height: 41px;
+}
+
+/* #question-holder {} */
+
+.avcontainer{
+  overflow: visible;
+}
+
+/* Styles to resize array boxes */
+.jsavhorizontalarray .jsavnode {
+    line-height: 50px !important;
+    min-width: 50px !important;
+    max-width: 50px !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+}
+
+/* Styles to position arrows */
+.jsavindex.jsavarrow::before {
+    left: 18px;
+}
+
+#legend-comment-wrapper {
+    padding-top: 2%;
+    height: 27vh;
+}
+
+.legend {
+    float: left;
+}
+
+.left {
+   background-color: #0000ff;
+}
+
+.right {
+   background-color: #ff0000;
+}
+
+.merge {
+   background-color: #cc00ff;
+}
+
+.selected-pivot {
+   background-color: #ddddff;
+}
+
+.swapping {
+   background-color: #f99b9b;
+}
+
+.comment-box {
+    margin: auto;
+}
+
+.slidecontainer {
+    padding-top: 0%;
+}
+
+.buttons-wrapper {
+    text-align: center;
+    padding-top: 2%;
+}

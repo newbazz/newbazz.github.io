@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+      <title>Quick Sort Practice</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="static/lib/JSAV/css/JSAV.css" type="text/css" />
+      <link rel="stylesheet" href="static/lib/ODSA/css/odsaAV.css" type="text/css" />
+      <link rel="stylesheet" href="static/lib/ODSA/css/odsaStyle.css" type="text/css" />
+      <link rel="stylesheet" href="static/lib/quicksortAV.css" type="text/css" />
+      <link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+      <link rel="stylesheet" type="text/css" href="css/quicksort-styles.css">
+  </head>
+  <body onload="handlers();">
+    <div class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul>
+          <li><b>Select</b> the length of the array which you
+          would like to sort in the select pane.</li>
+          <li>Enter the unsorted array where each elements are
+          separated by commas in the input field.</li>
+          <li>Click <b>Setup</b> to draw the canvas and start
+          the experiment.</li>
+          <li>Click <b>Next</b> to go ahead with the
+          visualization.</li>
+          <li>Click on <b>Reset</b> to reset the experiment and
+          start again.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="container">
+       <div id="input-holder">
+         <label id="arraysizeLabel" for="arraysize"></label>
+         <select id="arraysize"></select>
+         <label id="arrayValuesLabel" for="arrayValues"></label>
+         <input size="25" name="arrayValues" id="arrayValues" class="text-box" placeholder="Array Values" type="text" />
+       </div>
+       
+       <div class="avcontainer">
+           <div class="jsavcontrols" style="display: none;"></div>
+           <p class="jsavoutput jsavline" style="display: none;"></p>
+       </div> 
+       
+       <div id="legend-comment-wrapper">
+          <ul class="legend">
+            <li><span class="left"></span> Left Pointer </li>
+            <li><span class="right"></span> Right Pointer </li>
+            <li><span class="merge"></span> Merge of Pointers</li>
+            <li><span class="selected-pivot"></span> Selected Pivot Element</li>
+            <li><span class="swapping"></span> Swapping</li>
+          </ul>
+          
+          <div class="comment-box" id="comment-box-bigger">
+            <b>Observations</b>
+            <p id="ins"></p>
+          </div>
+          
+       </div>
+       <div class="buttons-wrapper">
+         <form id="ssperform" style="display: none">
+           <p>
+             <input id="run" type="button" name="run" />
+             <input id="reset" type="button" name="reset" />
+           </p>
+         </form>
+         <input class="button-input" type="button" value="Setup" id="setup">
+         <input class="button-input" type="button" value="Reset" id="resetArt">
+         <input class="button-input" type="button" value="Next" id="next">
+       </div>
+       
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="static/lib/JSAV/lib/jquery.transit.js"></script>
+    <script src="static/lib/JSAV/js/JSAV-min.js"></script>
+    <script src="static/lib/ODSA/js/odsaUtils.js"></script>
+    <script src="static/lib/ODSA/js/odsaAV.js"></script>
+    <script src="static/lib/quicksortCODE.js"></script>
+    <script src="js/quicksortAV.js"></script>
+    <script src="../../assets/js/instruction-box.js"></script>
+    <script>
+      function handlers(){
+        $("#setup").click(function() {
+          displayComment("");
+          commentsQueue = [];
+          $("#run").click();
+        });
+    
+        $("#next").click(function() {
+          $(".jsavforward").click();
+          displayComment(commentsQueue.shift());
+        });
+            
+        $("#resetArt").click(function() {
+          $("#reset").click();
+          displayComment("");
+          commentsQueue = [];
+        });
+            
+        $('#setup').click();
+      }
+    </script>
+  <script src="../../assets/js/iframeResize.js"></script></body>
+</html>
