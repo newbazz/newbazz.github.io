@@ -26,6 +26,10 @@ for i in dir_list:
 				lines += '<script type="text/javascript" src="./assets/js/llyv.min.js"></script>\n'
 			elif line.strip() == '<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/wingkwong/lazy-load-youtube-videos/master/src/llyv.min.css" />':
 				lines += '<link rel="stylesheet" type="text/css" href="assets/css/llyv.min.css">\n'
+			elif line.strip() == '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.6-b/css/style.min.css" />':
+				lines += '<link rel="stylesheet" href="./assets/css/style.min.css" />'
+			elif line.strip() == '<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">':
+				lines += '<script src="./assets/js/popper.min.js">'
 			else:
 				lines += line
 		file1 = open(file, "w")
