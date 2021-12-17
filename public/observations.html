@@ -27,7 +27,7 @@
   <meta name="experiment-short-name" content="free-vibration" />
   <meta name="developer-institute" content="IIITH" />
   <meta name="learning-unit" content="FREE VIBRATION OF S.D.O.F SYSTEM" />
-  <meta name="task-name" content="Pretest" />
+  <meta name="task-name" content="Observations" />
   <!-- For iPhone -->
   <meta name="msapplication-TileColor" content="#4076e0" />
   <!-- Chrome, Firefox OS and Opera -->
@@ -169,7 +169,7 @@
         </div>
         <div>
          <div class="d-flex nav-menu-body">
-          <a href="pretest.html" class="p-2  current-item ">
+          <a href="pretest.html" class="p-2 ">
            Pretest
           </a>
          </div>
@@ -202,7 +202,7 @@
         </div>
         <div>
          <div class="d-flex nav-menu-body">
-          <a href="observations.html" class="p-2 ">
+          <a href="observations.html" class="p-2  current-item ">
            Observations
           </a>
          </div>
@@ -273,7 +273,7 @@
      </div>
      <div>
       <div class="d-flex nav-menu-body">
-       <a href="pretest.html" class="p-2  current-item ">
+       <a href="pretest.html" class="p-2 ">
         Pretest
        </a>
       </div>
@@ -306,7 +306,7 @@
      </div>
      <div>
       <div class="d-flex nav-menu-body">
-       <a href="observations.html" class="p-2 ">
+       <a href="observations.html" class="p-2  current-item ">
         Observations
        </a>
       </div>
@@ -355,58 +355,52 @@
        Free Vibration of S.D.O.F System
       </h2>
      </div>
-     <div id="quiz">
-      <div class="question">
-       1. Time period of the structure changes when the initial conditions.
-      </div>
-      <div class="answers">
-       <label>
-        <input type="radio" name="question0" value="a" />
-        a: True
-       </label>
-       <label>
-        <input type="radio" name="question0" value="b" />
-        b: False
-       </label>
-      </div>
-      <div class="question">
-       2. Time period is inversely proportional to mass.
-      </div>
-      <div class="answers">
-       <label>
-        <input type="radio" name="question1" value="a" />
-        a: True
-       </label>
-       <label>
-        <input type="radio" name="question1" value="b" />
-        b: False
-       </label>
-      </div>
-      <div class="question">
-       3. Damping increases amplitude of the vibration.
-      </div>
-      <div class="answers">
-       <label>
-        <input type="radio" name="question2" value="a" />
-        a: True
-       </label>
-       <label>
-        <input type="radio" name="question2" value="b" />
-        b: False
-       </label>
-      </div>
-     </div>
-     <button id="submit" class="btn btn-primary">
-      Submit Quiz
-     </button>
-     <div id="results">
-     </div>
+     <p>
+      Start the experiment with some default values of initial displacement (u=10mm) and initial velocity (v=5m/s). and zero damping. Pause the experiment after a few cycles.
+      <br />
+     </p>
+     <p>
+      <strong>
+       Observation 1:
+      </strong>
+     </p>
+     <ul>
+      <li>
+       Observe the time period (T) and amplitude.
+      </li>
+      <li>
+       Again start the experiment freshly, this time modifying the values of initial conditions.
+      </li>
+      <li>
+       Observe that the time period is independent of initial conditions.
+      </li>
+     </ul>
+     <p>
+      <strong>
+       Observation 2:
+      </strong>
+     </p>
+     <ul>
+      <li>
+       Effect of structures properties on time period
+      </li>
+      <li>
+       Modify the value of mass and observe the change in time period.
+      </li>
+      <li>
+       Run the experiment for different values of mass and note the time period every time mass is changed
+      </li>
+      <li>
+       Draw the graph between mass and time period.
+      </li>
+     </ul>
+     <p>
+      To read about the Theory of the experiment click
+      <a href="docs/2.manual.pdf">
+       here
+      </a>
+     </p>
     </div>
-    <script>
-     const myQuestions = [{"question":"1. Time period of the structure changes when the initial conditions.","answers":{"a":"True","b":"False"},"correctAnswer":"b"},{"question":"2. Time period is inversely proportional to mass.","answers":{"a":"True","b":"False"},"correctAnswer":"b"},{"question":"3. Damping increases amplitude of the vibration.","answers":{"a":"True","b":"False"},"correctAnswer":"b"}];
-    </script>
-    <script src="./assets/js/assesment.js">
-    </script>
    </div>
   </div>
   <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
