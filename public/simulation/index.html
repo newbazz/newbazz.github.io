@@ -4,29 +4,22 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-		<link rel="stylesheet" href="./css/main.css">		
+		<link rel="stylesheet" href="./css/main.css">
 	</head>
-		<div class="columns is-centered">
-			<div class="column has-text-centered">
-				<div class="slidecontainer">
-					<p>INITIAL VELOCITY (m/s): <span id="demo_velocity"></span></p>
 
-					<input type="range" min="500" max="2000" value="1000" class="slider" id="velocity">
-				</div>
-			</div>
+	<body class="page">
+		<div class="tabs is-boxed is-medium">
+			<ul>
+				<li class="is-active"><a href="./index.html">Observation 1</a></li>
+				<li><a href="./obs2.html">Observation 2</a></li>
+				<li><a href="./vid.html">Video</a></li>
+			</ul>
+		</div>
 
-			<div class="column has-text-centered">
-				<div class="slidecontainer">
-					<p>INITIAL DISPLACEMENT: <span id="demo_vibration"></span></p>
-					<input type="range" min="50" max="200" value="100" class="slider" id="vibration">
-				</div>
-			</div>
-
-			<div class="column has-text-centered">
-				<div class="slidecontainer">
-					<p>MASS (kg): <span id="demo_mass"></span></p>
-
-					<input type="range" min="136000" max="500000" value="136000" class="slider" id="mass">
+		<div class="graph">
+			<div class="columns is-centered">
+				<div class="column has-text-centered">
+					<div class="title is-4">Observation 1</div>
 				</div>
 			</div>
 		</div>
@@ -34,22 +27,46 @@
 		<div class="columns is-centered">
 			<div class="column has-text-centered">
 				<div class="slidecontainer">
-					<p>ETTA(IN PERCENTAGE): <span id="demo_etta"></span></p>
-					<input type="range" min="5" max="9" value="5" class="slider" id="etta">
+					<p>MASS 1(in kg): <span id="demo_mass1"></span></p>
+					<input type="range" min="50000" max="250000" value="100000" class="slider" id="mass1">
 				</div>
 			</div>
 
 			<div class="column has-text-centered">
 				<div class="slidecontainer">
-					<p>STIFFNESS: <span id="demo_stiff"></span></p>
-					<input type="range" min="30000000" max="60000000" value="40000000" class="slider" id="stiff">
+					<p>MASS 2(in kg): <span id="demo_mass2"></span></p>
+					<input type="range" min="50000" max="250000" value="100000" class="slider" id="mass2">
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered">
+			<div class="column has-text-centered">
+				<div class="slidecontainer">
+					<p>STIFFNESS 1: <span id="demo_stiff1"></span></p>
+					<input type="range" min="20000000" max="40000000" value="30000000" class="slider" id="stiff1">
+				</div>
+			</div>
+
+			<div class="column has-text-centered">
+				<div class="slidecontainer">
+					<p>STIFFNESS 2: <span id="demo_stiff2"></span></p>
+					<input type="range" min="20000000" max="40000000" value="30000000" class="slider" id="stiff2">
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered">
+			<div class="column has-text-centered">
+				<div class="slidecontainer">
+					<p>GROUND MOTION: <span id="demo_groundMot"></span></p>
+					<input type="range" min="1" max="6" value="1" class="slider" id="groundMot">
 				</div>
 			</div>
 		</div>
 
 		<div class="columns is-mobile is-centered">
 			<div class="column has-text-centered">
-				<button id="damping" class="action-button">Toggle Damping</button>
 				<button id="play" class="action-button">Play</button>
 				<button id="pause" class="action-button">Pause</button>
 				<button id="restart" class="action-button">Restart</button>
@@ -69,25 +86,26 @@
 		<div class="graph">
 			<div class="columns is-centered">
 				<div class="column has-text-centered">
-					<div id="disPlot" ></div>
+					<div class="title is-4 plot-title">Left Building</div>
+					<div id="disB1Plot"></div>
 				</div>
 
 				<div class="column has-text-centered">
-					<div id ="lenPlot"></div>
+					<div class="title is-4 plot-title">Right Building</div>
+					<div id="disB2Plot"></div>
 				</div>
 			</div>
 		</div>
-		<div class="graph">
-			<div class="columns is-centered">
-				<div class="column has-text-centered">
-					<div id ="timePlot"></div>
-				</div>
-			</div>
-		</div>
+
+		<script src="./data/groundData1.json"></script>
+		<script src="./data/groundData2.json"></script>
+		<script src="./data/groundData3.json"></script>
+		<script src="./data/groundData4.json"></script>
+		<script src="./data/groundData5.json"></script>
+		<script src="./data/groundData6.json"></script>
 
 		<script src="https://unpkg.com/mathjs@9.2.0/lib/browser/math.js"></script>
-		<script src='https://cdn.plot.ly/plotly-1.47.4.min.js'></script>
-
-		<script src="./js/main.js"></script>
+		<script src="https://cdn.plot.ly/plotly-1.47.4.min.js"></script>
+		<script src="./js/obs1.js"></script>
 	<script src="../assets/js/iframeResize.js"></script></body>
 </html>
